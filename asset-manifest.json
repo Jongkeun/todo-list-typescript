@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Jongkeun/todo-list-typescript/static/css/main.4c0e63f7.chunk.css",
-    "main.js": "/Jongkeun/todo-list-typescript/static/js/main.e87e577c.chunk.js",
-    "main.js.map": "/Jongkeun/todo-list-typescript/static/js/main.e87e577c.chunk.js.map",
-    "runtime-main.js": "/Jongkeun/todo-list-typescript/static/js/runtime-main.6560dde1.js",
-    "runtime-main.js.map": "/Jongkeun/todo-list-typescript/static/js/runtime-main.6560dde1.js.map",
-    "static/js/2.8ca5c8b4.chunk.js": "/Jongkeun/todo-list-typescript/static/js/2.8ca5c8b4.chunk.js",
-    "static/js/2.8ca5c8b4.chunk.js.map": "/Jongkeun/todo-list-typescript/static/js/2.8ca5c8b4.chunk.js.map",
-    "index.html": "/Jongkeun/todo-list-typescript/index.html",
-    "precache-manifest.1b8d145c84eefd9ad69beab471da291d.js": "/Jongkeun/todo-list-typescript/precache-manifest.1b8d145c84eefd9ad69beab471da291d.js",
-    "service-worker.js": "/Jongkeun/todo-list-typescript/service-worker.js",
-    "static/css/main.4c0e63f7.chunk.css.map": "/Jongkeun/todo-list-typescript/static/css/main.4c0e63f7.chunk.css.map",
-    "static/js/2.8ca5c8b4.chunk.js.LICENSE.txt": "/Jongkeun/todo-list-typescript/static/js/2.8ca5c8b4.chunk.js.LICENSE.txt"
+    "main.css": "/todo-list-typescript/static/css/main.4c0e63f7.chunk.css",
+    "main.js": "/todo-list-typescript/static/js/main.e87e577c.chunk.js",
+    "main.js.map": "/todo-list-typescript/static/js/main.e87e577c.chunk.js.map",
+    "runtime-main.js": "/todo-list-typescript/static/js/runtime-main.a51495f6.js",
+    "runtime-main.js.map": "/todo-list-typescript/static/js/runtime-main.a51495f6.js.map",
+    "static/js/2.62f063a0.chunk.js": "/todo-list-typescript/static/js/2.62f063a0.chunk.js",
+    "static/js/2.62f063a0.chunk.js.map": "/todo-list-typescript/static/js/2.62f063a0.chunk.js.map",
+    "index.html": "/todo-list-typescript/index.html",
+    "precache-manifest.3fc4b01b45defb9fffcd509ce4e7d62f.js": "/todo-list-typescript/precache-manifest.3fc4b01b45defb9fffcd509ce4e7d62f.js",
+    "service-worker.js": "/todo-list-typescript/service-worker.js",
+    "static/css/main.4c0e63f7.chunk.css.map": "/todo-list-typescript/static/css/main.4c0e63f7.chunk.css.map",
+    "static/js/2.62f063a0.chunk.js.LICENSE.txt": "/todo-list-typescript/static/js/2.62f063a0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.6560dde1.js",
-    "static/js/2.8ca5c8b4.chunk.js",
+    "static/js/runtime-main.a51495f6.js",
+    "static/js/2.62f063a0.chunk.js",
     "static/css/main.4c0e63f7.chunk.css",
     "static/js/main.e87e577c.chunk.js"
   ]

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-type TitleProps = {
-  title: string;
+type DeleteProps = {
+  onClick: () => void;
 };
 const Button = styled.button`
   float: right;
@@ -14,8 +14,8 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Delete = () => {
-  return <Button>X</Button>;
+const Delete = ({ onClick }: DeleteProps) => {
+  return <Button onClick={onClick}>X</Button>;
 };
 
 export default Delete;

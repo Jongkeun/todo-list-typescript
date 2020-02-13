@@ -6,6 +6,11 @@ type CheckboxProps = {
   onChange: Function;
   checked: boolean;
 };
+
+type SpanProps = {
+  checked: boolean;
+};
+
 const Label = styled.label`
   padding: 15px 30px;
   padding-left: 40px;
@@ -23,16 +28,16 @@ const Input = styled.input`
 `;
 const Span = styled.span`
   position: absolute;
-  top: 32px;
   left: 3px;
   height: 25px;
   width: 25px;
   background-color: #eee;
+  top: 10px;
 
   &:after {
     content: "";
     position: absolute;
-    display: none;
+    display: ${(props: SpanProps) => (props.checked ? "inline" : "none")};
     margin-right: 10px;
     left: 9px;
     top: 5px;
@@ -53,7 +58,7 @@ const Checkbox = ({ content, onChange, checked }: CheckboxProps) => {
     <Label className={checked ? "checked" : ""}>
       {content}
       <Input type="checkbox" onChange={onChanged}></Input>
-      <Span />
+      <Span checked={checked} />
     </Label>
   );
 };

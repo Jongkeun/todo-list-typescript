@@ -1,46 +1,74 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Todo from "../components/Todo";
 import Title from "../components/Title";
+import TodoInput from "../components/TodoInput";
+import { setStorage, getStorage } from "../utils/storage";
 
-const Container = styled.div`
-  margin: auto;
-  background-color: #284b63;
-  min-height: 100vh;
+type TodoObj = {
+  id: string;
+  isDone: boolean;
+  content: string;
+};
+const Container = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  width: 50vw;
-  max-width: 800px;
+  background-color: #284b63;
+  max-width: 500px;
+  margin: auto;
+  min-height: 100vh;
 `;
+
+const generateID = () => {
+  return (
+    "_" +
+    Math.random()
+      .toString(36)
+      .substr(2, 9)
+  );
+};
 const TodoListContainer = () => {
-  const generateID = () => {
-    return (
-      "_" +
-      Math.random()
-        .toString(36)
-        .substr(2, 9)
-    );
+  const [todos, setTodos] = useState(JSON.parse(getStorage("todos")) || []);
+
+  useEffect(() => {
+    setStorage("todos", JSON.stringify(todos));
+  });
+
+  const addTodo = (content: string) => {
+    const updated = todos.concat({
+      id: generateID(),
+      isDone: false,
+      content: content,
+    });
+    setTodos(updated);
   };
 
-  const [todos, setTodos] = useState([
-    { id: generateID(), isDone: false, content: "hello1" },
-    { id: generateID(), isDone: false, content: "hello2" },
-    { id: generateID(), isDone: false, content: "hello3" },
-    { id: generateID(), isDone: false, content: "hello4" },
-  ]);
+  const toggleCheckbox = (id: string) => {
+    let updated = todos.map((element: TodoObj) => {
+      if (element.id === id) {
+        element.isDone = !element.isDone;
+      }
+      return element;
+    });
+    setTodos(updated);
+  };
+
+  const deleteTodo = (id: string) => {
+    let updated = todos.filter((element: TodoObj) => element.id !== id);
+    setTodos(updated);
+  };
 
   return (
     <Container>
-      <Title title={"Todo List"} />
-      {todos.map(todo => (
+      <Title title={"typescript"} />
+      <TodoInput addTodo={addTodo} />
+      {todos.map((todo: TodoObj) => (
         <Todo
           key={todo.id}
           todo={todo}
-          checkBoxChanged={() => "hello"}
-          deleteTodo={() => "return"}
+          checkBoxChanged={toggleCheckbox}
+          deleteTodo={deleteTodo}
         />
       ))}
     </Container>

@@ -21,7 +21,11 @@ const Container = styled.div`
 `;
 const Todo = ({ todo, checkBoxChanged, deleteTodo }: TodoProps) => {
   const updateTodo = () => {
-    console.log(todo.id);
+    checkBoxChanged(todo.id);
+  };
+
+  const clickDeleteButton = () => {
+    deleteTodo(todo.id);
   };
   return (
     <Container>
@@ -30,7 +34,7 @@ const Todo = ({ todo, checkBoxChanged, deleteTodo }: TodoProps) => {
         onChange={updateTodo}
         checked={todo.isDone}
       />
-      <Delete />
+      <Delete onClick={clickDeleteButton} />
     </Container>
   );
 };

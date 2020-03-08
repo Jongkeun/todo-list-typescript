@@ -29,7 +29,9 @@ const generateID = () => {
   );
 };
 const TodoListContainer = () => {
-  const [todos, setTodos] = useState(JSON.parse(getStorage("todos")) || []);
+  const storedTodoList = getStorage("todos");
+  const values = storedTodoList ? JSON.parse(storedTodoList) : [];
+  const [todos, setTodos] = useState(values);
 
   useEffect(() => {
     setStorage("todos", JSON.stringify(todos));

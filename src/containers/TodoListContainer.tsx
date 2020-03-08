@@ -4,7 +4,7 @@ import Todo from "../components/Todo";
 import Title from "../components/Title";
 import TodoInput from "../components/TodoInput";
 import { setStorage, getStorage } from "../utils/storage";
-
+import axios from "axios";
 type TodoObj = {
   id: string;
   isDone: boolean;
@@ -35,6 +35,7 @@ const TodoListContainer = () => {
 
   useEffect(() => {
     setStorage("todos", JSON.stringify(todos));
+    axios.get("/page/b").then(data => console.log(data));
   });
 
   const addTodo = (content: string) => {

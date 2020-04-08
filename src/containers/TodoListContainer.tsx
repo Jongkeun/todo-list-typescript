@@ -17,7 +17,7 @@ const Container = styled.main`
   flex-direction: column;
   align-items: center;
   background-color: #284b63;
-  max-width: 500px;
+  max-width: 800px;
   margin: auto;
   min-height: 100vh;
 `;

@@ -5,11 +5,13 @@ import Title from "../components/Title";
 import TodoInput from "../components/TodoInput";
 import { setStorage, getStorage } from "../utils/storage";
 import axios from "axios";
+
 type TodoObj = {
   id: string;
   isDone: boolean;
   content: string;
 };
+
 const Container = styled.main`
   display: flex;
   flex-direction: column;
@@ -21,12 +23,7 @@ const Container = styled.main`
 `;
 
 const generateID = () => {
-  return (
-    "_" +
-    Math.random()
-      .toString(36)
-      .substr(2, 9)
-  );
+  return "_" + Math.random().toString(36).substr(2, 9);
 };
 const TodoListContainer = () => {
   const storedTodoList = getStorage("todos");
@@ -35,7 +32,7 @@ const TodoListContainer = () => {
 
   useEffect(() => {
     setStorage("todos", JSON.stringify(todos));
-    axios.get("/page/b").then(data => console.log(data));
+    axios.get("/page/b").then((data) => console.log(data));
   });
 
   const addTodo = (content: string) => {

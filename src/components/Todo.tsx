@@ -18,7 +18,9 @@ const Container = styled.div`
   margin: 5px 1px;
   width: 90%;
   border: 1px white solid;
+  font-size: 1.5em;
 `;
+
 const Todo = ({ todo, checkBoxChanged, deleteTodo }: TodoProps) => {
   const updateTodo = () => {
     checkBoxChanged(todo.id);

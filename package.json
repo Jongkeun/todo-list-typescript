@@ -2,7 +2,6 @@
   "name": "todo-list-typescript",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://misehwanta.cafe24app.com/",
   "dependencies": {
     "axios": "^0.19.2",
     "now": "^17.0.4",

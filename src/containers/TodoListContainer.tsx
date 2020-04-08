@@ -20,6 +20,7 @@ const Container = styled.main`
   max-width: 800px;
   margin: auto;
   min-height: 100vh;
+  color: white;
 `;
 
 const generateID = () => {
@@ -32,7 +33,6 @@ const TodoListContainer = () => {
 
   useEffect(() => {
     setStorage("todos", JSON.stringify(todos));
-    axios.get("/page/b").then((data) => console.log(data));
   });
 
   const addTodo = (content: string) => {

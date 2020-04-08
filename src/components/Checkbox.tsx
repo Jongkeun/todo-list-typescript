@@ -22,17 +22,19 @@ const Label = styled.label`
     text-decoration: line-through;
   }
 `;
+
 const Input = styled.input`
   position: absolute;
   opacity: 0;
 `;
+
 const Span = styled.span`
   position: absolute;
   left: 3px;
   height: 25px;
   width: 25px;
   background-color: #eee;
-  top: 10px;
+  top: 17px;
 
   &:after {
     content: "";
